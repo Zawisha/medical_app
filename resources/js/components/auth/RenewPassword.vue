@@ -4,11 +4,8 @@
         <div class="alert alert-danger" v-if="conf_password_alert">
             <p>Пароли не совпадают</p>
         </div>
-        <div class="alert alert-danger" v-if="conf_password_alert">
-            <p>Пароль не короче 6 символов</p>
-        </div>
         <div class="alert alert-danger" v-if="error_6">
-            <p>Пароль не короче 6 символов</p>
+            <p>Пароль не короче 6 символовqqqq</p>
         </div>
         <div class="alert alert-danger" v-if="success">
             <p>Пароль обновлён</p>
@@ -55,7 +52,7 @@
                                 password: this.password
                             })
                             .then( (response)  => {
-                                router.push("login")
+                                this.$router.push('/login')
                             })
                             .catch(error => {
                                 this.error_6 = true;

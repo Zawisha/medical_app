@@ -3263,9 +3263,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -3292,7 +3289,7 @@ __webpack_require__.r(__webpack_exports__);
           token: this.$route.params.token,
           password: this.password
         }).then(function (response) {
-          router.push("login");
+          _this.$router.push('/login');
         })["catch"](function (error) {
           _this.error_6 = true;
         });
@@ -39239,15 +39236,9 @@ var render = function() {
         ])
       : _vm._e(),
     _vm._v(" "),
-    _vm.conf_password_alert
-      ? _c("div", { staticClass: "alert alert-danger" }, [
-          _c("p", [_vm._v("Пароль не короче 6 символов")])
-        ])
-      : _vm._e(),
-    _vm._v(" "),
     _vm.error_6
       ? _c("div", { staticClass: "alert alert-danger" }, [
-          _c("p", [_vm._v("Пароль не короче 6 символов")])
+          _c("p", [_vm._v("Пароль не короче 6 символовqqqq")])
         ])
       : _vm._e(),
     _vm._v(" "),
