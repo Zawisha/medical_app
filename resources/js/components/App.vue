@@ -22,6 +22,10 @@
                         <a href="#" @click.prevent="$auth.logout()">Logout</a>
                     </li>
 
+<!--                    <li>-->
+<!--                        <router-link :to="{ name: 'dashboard' }">Forgot the password</router-link>-->
+<!--                    </li>-->
+
                 </ul>
             </nav>
         </div>

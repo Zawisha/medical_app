@@ -25,3 +25,6 @@ Route::group(['middleware' => 'jwt.auth'], function(){
 Route::group(['middleware' => 'jwt.refresh'], function(){
     Route::get('auth/refresh', 'MyAuth\AuthController@refresh');
 });
+Route::post('confirm', 'MyAuth\AuthController@confirmToken');
+Route::post('forget', 'MyAuth\AuthController@forgetPassword');
+Route::post('ifexist', 'MyAuth\AuthController@if_exist');

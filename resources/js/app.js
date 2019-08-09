@@ -1,5 +1,4 @@
 
-
 require('./bootstrap');
 
 window.Vue = require('vue');
@@ -8,11 +7,11 @@ import Vue from 'vue';
 
 import axios from 'axios';
 import VueAxios from 'vue-axios';
-;
+
 import VueRouter from 'vue-router';
 
 Vue.use(VueRouter);
-Vue.use(VueAxios, axios)
+Vue.use(VueAxios, axios);
 
 
 
@@ -26,8 +25,9 @@ import Home from './components/Home'
 import Register from './components/auth/Register.vue';
 import Login from './components/auth/Login.vue';
 import Dashboard from './components/Dashboard.vue';
-
-
+import AcceptToken from './components/AcceptToken.vue';
+import ForgetPassword from './components/auth/ForgetPassword.vue';
+import RenewPassword from './components/auth/RenewPassword.vue';
 
 
 
@@ -58,6 +58,23 @@ const router = new VueRouter({
                 auth: true
             }
         },
+        {
+            path: '/accept/:token',
+            name: 'accept',
+            component: AcceptToken
+        },
+        {
+            path: '/forget',
+            name: 'forget',
+            component: ForgetPassword
+        },
+        {
+            path: '/renew_password/:id/:token',
+            name: 'renew_pass',
+            component: RenewPassword
+        },
+
+
 
     ],
 });

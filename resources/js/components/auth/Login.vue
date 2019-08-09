@@ -1,8 +1,8 @@
 <template>
     <div>
-<!--        <div class="alert alert-danger" v-if="error">-->
-<!--            <p>There was an error, unable to sign in with those credentials.</p>-->
-<!--        </div>-->
+        <div class="alert alert-danger" v-if="error">
+            <p>Не верный логин или пароль</p>
+        </div>
         <form autocomplete="off" @submit.prevent="login" Метод = «пост»>
             <div class="form-group">
                 <label for="email">E-mail</label>
@@ -35,13 +35,19 @@
                         email: app.email,
                         password: app.password
                     },
-                    success: function () {},
-                    error: function () {},
+                    success: function () {
+
+                    },
+                    error: function () {
+                        this.error = true;
+                    },
                     rememberMe: true,
                     redirect: '/dashboard',
                     fetchUser: true,
                 });
             },
+
+
         }
     }
 </script>

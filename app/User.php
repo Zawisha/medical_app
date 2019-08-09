@@ -45,4 +45,8 @@ class User extends Authenticatable implements JWTSubject
     {
         return [];
     }
+    public function forget_pas()
+    {
+        return $this->hasOne('App\ForgetPassword');
+    }
 }
